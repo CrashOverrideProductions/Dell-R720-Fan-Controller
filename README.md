@@ -18,12 +18,13 @@ something something darkside
 ---
 <!-- To Do List -->
 ### To Do List
-- [x] Complete Readme.md
-- [x] Build & Test Prototype
-- [x] Design Schematic
+- [ ] Complete Readme.md
+- [ ] Develop Fan Speed Curve Algorithim
+- [ ] Design Windows Service
+- [ ] Design Windows Settings UI
 
----
-
+------------
+### Process
 
 <!-- Licencing Always at the Bottom -->
 ------------
