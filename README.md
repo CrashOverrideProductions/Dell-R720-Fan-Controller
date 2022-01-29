@@ -26,18 +26,23 @@ something something darkside
 ------------
 ### CMD Commands
 print temps and fans rpms
+
 ipmitool -I lanplus -H youripaddresshere -U root -P calvin sensor reading "Ambient Temp" "FAN 1 RPM" "FAN 2 RPM" "FAN 3 RPM"
 
 print fan info
+
 ipmitool -I lanplus -H youripaddresshere -U root -P calvin  sdr get "FAN 1 RPM" "FAN 2 RPM" "FAN 3 RPM"
 
 enable manual/static fan control
+
 ipmitool -I lanplus -H youripaddresshere -U root -P calvin  raw 0x30 0x30 0x01 0x00
 
 disable manual/static fan control
+
 ipmitool -I lanplus -H youripaddresshere -U root -P calvin  raw 0x30 0x30 0x01 0x01
 
 Set Fan Speed (Last Byte)
+
 ipmitool -I lanplus -H youripaddresshere -U root -P calvin  raw 0x30 0x30 0x02 0xff 0x00
 
 Fan Speed Range
