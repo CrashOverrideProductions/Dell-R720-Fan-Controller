@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Dell Fan Controller Installer" Language="1033" Version="1.0.0.0" Manufacturer="Kobol Systems" UpgradeCode="7b492cca-5de3-4094-aa24-db099989e14f">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+		<Feature Id="ProductFeature" Title="Dell Fan Controller Installer" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFiles64Folder">
+				<Directory Id="INSTALLFOLDER" Name="Dell Fan Controller" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			
+			<Component Id ="Settings.ini">
+				<File Source="..\DellFanController\Settings.ini" Name ="Settings.ini" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="OpenHardwareMonitorLib.dll">
+				<File Source="../OpenHardwareMonitorLib.dll" Name="OpenHardwareMonitorLib.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cygcrypto0.9.8.dll">
+				<File Source="../bmc/cygcrypto-0.9.8.dll" Name="cygcrypto-0.9.8.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cyggccs1.dll">
+				<File Source="../bmc/cyggcc_s-1.dll" Name="cyggcc_s-1.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cygwin1.dll">
+				<File Source="../bmc/cygwin1.dll" Name="cygwin1.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cygz.dll">
+				<File Source="../bmc/cygz.dll" Name="cygz.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="dcwipm32.dll">
+				<File Source="../bmc/dcwipm32.dll" Name="dcwipm32.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="ipmitool.exe">
+				<File Source="../bmc/ipmitool.exe" Name="ipmitool.exe" KeyPath="yes"/>
+			</Component>
+			
+			<Component Id="ProductComponent"> 
+				<File Source="$(var.DellFanController.TargetPath)" />
+				<ServiceInstall Id="DellFanControllerInstall" DisplayName="Productiv Rhipe API SVC" Name="RhipeAPISVC.exe" Description="Dell PowerEdge Server Fan Controller." ErrorControl="normal" Start="auto" Type="ownProcess" Vital="yes" />
+				<ServiceControl Id="DellFanControllerControl" Name="DellFanController.exe" Start="install" Stop="uninstall" Remove="uninstall" />
+
+				<RemoveFile Id="DellFanController" Name="DellFanController.exe" On="uninstall" />
+				<RemoveFile Id="AllFilesInInstallDir" Name="*" Directory="INSTALLFOLDER" On="uninstall" />
+				<RemoveFolder Id="INSTALLFOLDER" On="uninstall" />
+			 </Component>
+			
+		</ComponentGroup>
+	</Fragment>
+</Wix>

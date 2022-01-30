@@ -1,0 +1,1 @@
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\DellFanController\DellFanControllerWixInstaller\bin\Release\Dell Fan Controller Installer.msi

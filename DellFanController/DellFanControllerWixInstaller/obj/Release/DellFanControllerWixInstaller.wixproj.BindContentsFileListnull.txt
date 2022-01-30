@@ -1,0 +1,9 @@
+../bmc/cygcrypto-0.9.8.dll
+../bmc/cyggcc_s-1.dll
+../bmc/cygwin1.dll
+../bmc/cygz.dll
+../bmc/dcwipm32.dll
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\DellFanController\DellFanController\bin\Release\DellFanController.exe
+../bmc/ipmitool.exe
+../OpenHardwareMonitorLib.dll
+..\DellFanController\Settings.ini

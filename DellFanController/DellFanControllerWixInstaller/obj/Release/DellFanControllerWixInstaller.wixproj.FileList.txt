@@ -1,0 +1,5 @@
+obj\Release\Product.wixobj
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\DellFanController\DellFanControllerWixInstaller\bin\Release\Dell Fan Controller Installer.msi
+obj\Release\DellFanControllerWixInstaller.wixproj.BindContentsFileListnull.txt
+obj\Release\DellFanControllerWixInstaller.wixproj.BindOutputsFileListnull.txt
+obj\Release\DellFanControllerWixInstaller.wixproj.BindBuiltOutputsFileListnull.txt
