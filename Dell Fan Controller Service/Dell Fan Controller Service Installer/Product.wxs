@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Dell_Fan_Controller_Service_Installer" Language="1033" Version="1.0.0.0" Manufacturer="Kobol Systems" UpgradeCode="fb98712e-a2fb-4e9f-b562-241f5778d864">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="Dell_Fan_Controller_Service_Installer" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFiles64Folder">
+				<Directory Id="INSTALLFOLDER" Name="Dell Fan Controller" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+
+			<Component Id ="Settings.ini">
+				<File Source="..\Requires\Settings.ini" Name ="Settings.ini" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="OpenHardwareMonitorLib.dll">
+				<File Source="..\Requires\OpenHardwareMonitorLib.dll" Name="OpenHardwareMonitorLib.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cygcrypto0.9.8.dll">
+				<File Source="..\Requires\cygcrypto-0.9.8.dll" Name="cygcrypto-0.9.8.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cyggccs1.dll">
+				<File Source="..\Requires\cyggcc_s-1.dll" Name="cyggcc_s-1.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cygwin1.dll">
+				<File Source="..\Requires\cygwin1.dll" Name="cygwin1.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="cygz.dll">
+				<File Source="..\Requires\cygz.dll" Name="cygz.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="dcwipm32.dll">
+				<File Source="..\Requires\dcwipm32.dll" Name="dcwipm32.dll" KeyPath="yes"/>
+			</Component>
+
+			<Component Id ="ipmitool.exe">
+				<File Source="..\Requires\ipmitool.exe" Name="ipmitool.exe" KeyPath="yes"/>
+			</Component>
+
+			<Component Id="ProductComponent">
+				<File Source="$(var.Dell Fan Controller Service.TargetPath)" />
+				<ServiceInstall Id="DellFanControllerInstall" DisplayName="Kobol Dell Fan Controller SVC" Name="Dell Fan Controller" Description="Dell PowerEdge Server Fan Controller." ErrorControl="normal" Start="auto" Type="ownProcess" Vital="yes" />
+				<ServiceControl Id="DellFanControllerControl" Name="Dell Fan Controller" Start="install" Stop="uninstall" Remove="uninstall" />
+
+				<RemoveFile Id="DellFanController" Name="DellFanController.exe" On="uninstall" />
+				<RemoveFile Id="AllFilesInInstallDir" Name="*" Directory="INSTALLFOLDER" On="uninstall" />
+				<RemoveFolder Id="INSTALLFOLDER" On="uninstall" />
+			</Component>
+
+		</ComponentGroup>
+	</Fragment>
+</Wix>

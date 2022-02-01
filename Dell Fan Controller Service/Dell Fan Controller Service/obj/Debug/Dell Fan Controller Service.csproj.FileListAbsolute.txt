@@ -1,0 +1,10 @@
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\bin\Debug\Dell Fan Controller Service.exe.config
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\bin\Debug\Dell Fan Controller Service.exe
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\bin\Debug\Dell Fan Controller Service.pdb
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\obj\Debug\Dell Fan Controller Service.csproj.AssemblyReference.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\obj\Debug\Dell Fan Controller Service.csproj.SuggestedBindingRedirects.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\obj\Debug\Dell Fan Controller Service.csproj.CoreCompileInputs.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\obj\Debug\Dell Fan Controller Service.csproj.CopyComplete
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\obj\Debug\Dell Fan Controller Service.exe
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\obj\Debug\Dell Fan Controller Service.pdb

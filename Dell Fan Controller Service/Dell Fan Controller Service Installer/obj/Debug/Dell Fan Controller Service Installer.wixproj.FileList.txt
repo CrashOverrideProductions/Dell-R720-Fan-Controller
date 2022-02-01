@@ -1,0 +1,6 @@
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service Installer\bin\Debug\Dell_Fan_Controller_Service_Installer.msi
+obj\Debug\Product.wixobj
+obj\Debug\Dell Fan Controller Service Installer.wixproj.BindContentsFileListnull.txt
+obj\Debug\Dell Fan Controller Service Installer.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Dell Fan Controller Service Installer.wixproj.BindBuiltOutputsFileListnull.txt
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service Installer\bin\Debug\cab1.cab

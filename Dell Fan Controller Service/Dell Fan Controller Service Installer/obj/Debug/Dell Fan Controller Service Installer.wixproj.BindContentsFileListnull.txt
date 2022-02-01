@@ -1,0 +1,9 @@
+..\Requires\cygcrypto-0.9.8.dll
+..\Requires\cyggcc_s-1.dll
+..\Requires\cygwin1.dll
+..\Requires\cygz.dll
+..\Requires\dcwipm32.dll
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell Fan Controller Service\bin\Debug\Dell Fan Controller Service.exe
+..\Requires\ipmitool.exe
+..\Requires\OpenHardwareMonitorLib.dll
+..\Requires\Settings.ini
