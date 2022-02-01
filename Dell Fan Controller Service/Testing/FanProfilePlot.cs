@@ -33,8 +33,8 @@ namespace Testing
         internal void generatePlot(List<DataPoint> pointsList, float minSpeed, float maxSpeed, float minTemp, float maxTemp, double factor)
         {
             string Title = "Current Fan Profile";
-            string Subtitle = "Min Speed: " + minSpeed + "Max Speed: " + maxSpeed + 
-                              "Min Temp: " + minTemp + "Max Temp: " + maxTemp + "Factor: " + factor;
+            string Subtitle = "Min Speed: " + minSpeed + ", Max Speed: " + maxSpeed + 
+                              ", Min Temp: " + minTemp + ", Max Temp: " + maxTemp + ", Factor: " + factor;
 
             int size = pointsList.Count;
             int x =0;
@@ -51,12 +51,18 @@ namespace Testing
                 x++;
             }
 
-            var plotModel1 = new PlotModel { Title = Title, Subtitle = Subtitle };
+            var plotModel1 = new PlotModel { Title = Title, Subtitle = Subtitle};
             var areaSeries1 = new AreaSeries();
-            
+
+            areaSeries1.Fill = OxyColors.DarkGreen;
+            areaSeries1.StrokeThickness = 0;
+            areaSeries1.Background = OxyColors.Black;
+
+
             areaSeries1.ItemsSource = points;
-            areaSeries1.DataFieldX = "X";
-            areaSeries1.DataFieldY = "Y";
+            areaSeries1.DataFieldX = "CPU Package Temperature °C";
+            areaSeries1.DataFieldY = "Fan Speed (% of Maximum)";
+            //areaSeries1.Fill = OxyColor.FromArgb(64, 255, 228, 181);
             plotModel1.Series.Add(areaSeries1);
 
 
