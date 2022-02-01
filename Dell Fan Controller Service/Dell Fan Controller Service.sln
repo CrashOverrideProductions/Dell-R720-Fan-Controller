@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dell Fan Controller Service
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Dell Fan Controller Service Installer", "Dell Fan Controller Service Installer\Dell Fan Controller Service Installer.wixproj", "{0988FE2D-1E30-4DD1-A721-8A3FEE1720E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{0988FE2D-1E30-4DD1-A721-8A3FEE1720E5}.Release|Any CPU.Build.0 = Release|x86
 		{0988FE2D-1E30-4DD1-A721-8A3FEE1720E5}.Release|x86.ActiveCfg = Release|x86
 		{0988FE2D-1E30-4DD1-A721-8A3FEE1720E5}.Release|x86.Build.0 = Release|x86
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Debug|x86.Build.0 = Debug|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
