@@ -9,3 +9,6 @@ C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Ser
 C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Testing\bin\Debug\OxyPlot.dll
 C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Testing\bin\Debug\OxyPlot.xml
 C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Testing\obj\Debug\Testing.csproj.CopyComplete
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Testing\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Testing\bin\Debug\Newtonsoft.Json.dll
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Testing\bin\Debug\Newtonsoft.Json.xml

@@ -56,8 +56,8 @@
 
 			<Component Id="ProductComponent">
 				<File Source="$(var.Dell Fan Controller Service.TargetPath)" />
-				<ServiceInstall Id="DellFanControllerInstall" DisplayName="Kobol Dell Fan Controller SVC" Name="Dell Fan Controller" Description="Dell PowerEdge Server Fan Controller." ErrorControl="normal" Start="auto" Type="ownProcess" Vital="yes" />
-				<ServiceControl Id="DellFanControllerControl" Name="Dell Fan Controller" Start="install" Stop="uninstall" Remove="uninstall" />
+				<ServiceInstall Id="DellFanControllerInstall" DisplayName="Kobol Dell Fan Controller SVC" Name="Dell PowerEdge Fan Controller" Description="Dell PowerEdge Server Fan Controller." ErrorControl="normal" Start="auto" Type="ownProcess" Vital="yes" />
+				<ServiceControl Id="DellFanControllerControl" Name="Dell PowerEdge Fan Controller" Start="install" Stop="uninstall" Remove="uninstall" />
 
 				<RemoveFile Id="DellFanController" Name="DellFanController.exe" On="uninstall" />
 				<RemoveFile Id="AllFilesInInstallDir" Name="*" Directory="INSTALLFOLDER" On="uninstall" />

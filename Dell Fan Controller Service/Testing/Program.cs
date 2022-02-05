@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using OpenHardwareMonitor.Hardware;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,25 +8,59 @@ using System.Threading.Tasks;
 
 namespace Testing
 {
+    public struct DataItems
+    {
+        public string SensorName;
+        public string SensorType;
+        public string SensorValue;
+    }
+
+    public struct Processor
+    {
+        public string HardwareName;
+        public string HardwareIdent;
+        public List<DataItems> DataItems;
+    }
+
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            var myComputer = new Computer
+            {
+                CPUEnabled = true
+            };
+            myComputer.Open();
 
-            Algorithims algorithims = new Algorithims();
-            FanProfilePlot fanProfilePlot = new FanProfilePlot();
+            List<Processor> myProcessors = new List<Processor>();
 
-            float minSpeed = 26;
-            float maxSpeed = 60;
-            float minTemp = 40;
-            float maxTemp = 60;
-            double factor = 0.04;
+            foreach (var hardwareItem in myComputer.Hardware)
+            {
+                Processor processors = new Processor();
+                processors.HardwareName = hardwareItem.Name;
+                processors.HardwareIdent = hardwareItem.Identifier.ToString();
 
-            fanProfilePlot.generateDataSet(minSpeed, maxSpeed, minTemp, maxTemp, factor);
+                List<DataItems> dataItems = new List<DataItems>();
+                processors.DataItems = dataItems;
 
-            
+                foreach (var sensor in hardwareItem.Sensors)
+                {
+                    DataItems dataItem = new DataItems();
+                    dataItem.SensorName = sensor.Name;
+                    dataItem.SensorType = sensor.SensorType.ToString();
+                    dataItem.SensorValue = sensor.Value.ToString();
+                    processors.DataItems.Add(dataItem);
+                }
+                
+                myProcessors.Add(processors);
+            }
 
-          //  Console.ReadLine();
+            Console.WriteLine(JsonConvert.SerializeObject(myProcessors, Formatting.Indented));
+
+
+
+            Console.ReadLine();
         }
     }
 }

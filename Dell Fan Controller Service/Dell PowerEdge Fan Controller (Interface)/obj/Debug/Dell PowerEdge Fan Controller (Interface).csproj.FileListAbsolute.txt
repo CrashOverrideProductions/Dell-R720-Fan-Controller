@@ -1,0 +1,13 @@
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\bin\Debug\Dell PowerEdge Fan Controller (Interface).exe.config
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\bin\Debug\Dell PowerEdge Fan Controller (Interface).exe
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\bin\Debug\Dell PowerEdge Fan Controller (Interface).pdb
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).csproj.AssemblyReference.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).csproj.SuggestedBindingRedirects.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell_PowerEdge_Fan_Controller__Interface_.MainForm.resources
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell_PowerEdge_Fan_Controller__Interface_.Properties.Resources.resources
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).csproj.GenerateResource.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).csproj.CoreCompileInputs.cache
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).exe
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).pdb
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\bin\Debug\OpenHardwareMonitorLib.dll
+C:\Users\justi\Documents\GitHub\Dell-R720-Fan-Controller\Dell Fan Controller Service\Dell PowerEdge Fan Controller (Interface)\obj\Debug\Dell PowerEdge Fan Controller (Interface).csproj.CopyComplete

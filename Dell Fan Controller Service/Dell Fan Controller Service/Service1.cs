@@ -40,8 +40,8 @@ namespace Dell_Fan_Controller_Service
             serviceStatus.dwWaitHint = 100000;
             SetServiceStatus(this.ServiceHandle, ref serviceStatus);
 
-            // Configure the Work Timer - 2 Seconds.
-            WorkTimer.Interval = (2 * 1000); // 60 Seconds
+            // Configure the Work Timer.
+            WorkTimer.Interval = (5 * 1000); // 5 x 1000(ms) = 5 Sec
             WorkTimer.Elapsed += WorkTimer_Elapsed;
             WorkTimer.Start();
 

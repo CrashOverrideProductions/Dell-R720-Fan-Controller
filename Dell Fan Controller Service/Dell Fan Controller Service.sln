@@ -9,6 +9,8 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Dell Fan Controller Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dell PowerEdge Fan Controller (Interface)", "Dell PowerEdge Fan Controller (Interface)\Dell PowerEdge Fan Controller (Interface).csproj", "{2C6EF467-91AB-4949-AED8-E4569E82235D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,14 @@ Global
 		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D4675DD5-5C83-4BE5-ADDF-B75A04B7841A}.Release|x86.Build.0 = Release|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C6EF467-91AB-4949-AED8-E4569E82235D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
