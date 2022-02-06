@@ -22,6 +22,11 @@ namespace Testing
         public List<DataItems> DataItems;
     }
 
+    public struct timeStamp
+    {
+        public DateTime TimeStamp;
+        public List<Processor> Processors;
+    }
 
     internal class Program
     {
@@ -50,6 +55,9 @@ namespace Testing
                     dataItem.SensorName = sensor.Name;
                     dataItem.SensorType = sensor.SensorType.ToString();
                     dataItem.SensorValue = sensor.Value.ToString();
+
+                    Console.WriteLine(sensor.SensorType + ", " + sensor.Value);
+
                     processors.DataItems.Add(dataItem);
                 }
                 
