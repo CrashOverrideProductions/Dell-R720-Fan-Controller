@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.ServiceProcess;
 using System.Text;
@@ -226,11 +227,11 @@ namespace Dell_PowerEdge_Fan_Controller__Interface_
         private void dataChange()
         {
             // Generate New Dataset
-            float minSpeed = float.Parse(textBox3.Text);
-            float maxSpeed = float.Parse(textBox8.Text);
-            float minTemp = float.Parse(textBox7.Text);
-            float maxTemp = float.Parse(textBox6.Text);
-            double factor = float.Parse(textBox9.Text);
+            float minSpeed = float.Parse(txtMinFan.Text);
+            float maxSpeed = float.Parse(txtMaxFan.Text);
+            float minTemp = float.Parse(txtMinTemp.Text);
+            float maxTemp = float.Parse(txtMaxTemp.Text);
+            double factor = float.Parse(txtFactor.Text);
 
             List<fanProfile> fanProfiles = new List<fanProfile>();
 
@@ -252,10 +253,8 @@ namespace Dell_PowerEdge_Fan_Controller__Interface_
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            
-
             // Change Graph
-            dataChange();
+            //dataChange();
         }
 
 
@@ -300,8 +299,90 @@ namespace Dell_PowerEdge_Fan_Controller__Interface_
             return (int)newSpeed;
 
         }
+
+        private void openConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            settingsFile settings = new settingsFile();
+            Settings getSettings = new Settings();
+
+            OpenFileDialog theDialog = new OpenFileDialog();
+            theDialog.Title = "Open Text File";
+            theDialog.Filter = "ini files|*.ini";
+            theDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                settings = getSettings.getSettingsFile(theDialog.FileName.ToString());
+
+                txtiDracIP.Text = settings.iDracIP;
+                txtiDracUser.Text = settings.iDracUsername;
+                txtiDracPass.Text = settings.iDracPassword;
+                txtMinFan.Text = settings.MinSpeed;
+                txtMaxFan.Text = settings.MaxSpeed;
+                txtMinTemp.Text = settings.MinTemp;
+                txtMaxTemp.Text = settings.MaxTemp;
+                txtFactor.Text = settings.Factor;
+
+                if (settings.Shutdown == "true")
+                {
+                    chkShutdown.Checked = true;
+                }
+                else
+                { 
+                    chkShutdown.Checked = false;
+                }
+
+            }
+
+            // Change Graph
+            dataChange();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Change Graph
+            dataChange();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Save Settings File
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            saveFileDialog1.Filter = "ini files (*.ini)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+
+            //    settings = getSettings.getSettingsFile(theDialog.FileName.ToString());
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                settingsFile settings = new settingsFile();
+                Settings getSettings = new Settings();
+
+                // Do Stuff Here
+                settings.iDracIP = txtiDracIP.Text;
+                settings.iDracUsername = txtiDracUser.Text;
+                settings.iDracPassword = txtiDracPass.Text;
+                settings.MinSpeed = txtMinFan.Text;
+                settings.MaxSpeed = txtMaxFan.Text;
+                settings.MinTemp = txtMinTemp.Text;
+                settings.MaxTemp = txtMaxTemp.Text;
+                settings.Factor = txtFactor.Text;
+
+                if (chkShutdown.Checked == true)
+                {
+                    settings.Shutdown = "true";
+                }
+                else
+                {
+                    settings.Shutdown = "false";
+                }
+
+                    // Write Settings
+                    getSettings.saveSettingsFile(saveFileDialog1.FileName.ToString(), settings);
+            }
+        }
     }
-    
+
     public struct fanProfile
     { 
         public int Temp;
