@@ -21,7 +21,7 @@ namespace Dell_Fan_Controller_Service
     {
         internal float CPUTemp(float tCase)
         {
-            float temp = ((float)(tCase * 0.75));  // Change this to 90% of TCase (Default max temp)
+            float temp = ((float)(tCase * 0.90));
 
             List<float> packageTemps = new List<float>();
 

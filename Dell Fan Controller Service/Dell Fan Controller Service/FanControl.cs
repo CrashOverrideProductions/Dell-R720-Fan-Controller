@@ -55,6 +55,11 @@ namespace Dell_Fan_Controller_Service
 
         internal void sendFanSpeedCommand(string ipAddress, string username, string password, int fanSpeed)
         {
+            if (ipAddress == null )
+            {
+                EventLog.WriteEntry("Dell PowerEdge Fan Controller", "Dell PowerEdge iDrac IP is null", EventLogEntryType.Error);
+                return;
+            }
             Process process = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;

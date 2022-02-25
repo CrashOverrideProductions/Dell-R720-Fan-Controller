@@ -56,7 +56,7 @@ namespace Dell_Fan_Controller_Service
                 control.startControl();
 
                 // Add to Log
-                EventLog.WriteEntry("Dell PowerEdge Fan Controller", "Service Started", EventLogEntryType.Information); // "App Name", "Message"
+                EventLog.WriteEntry("Dell PowerEdge Fan Controller", "Service Started", EventLogEntryType.Error); // "App Name", "Message"
             }
             catch (Exception ex)
             {
